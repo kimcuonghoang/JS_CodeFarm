@@ -12,4 +12,4 @@ function findMaxNumber(a, b, c) {
 }
 
 // Output:
-console.log(findMaxNumber(1, 4, 8)); // 5
+findMaxNumber(1, 9, 8); // 5
