@@ -13,7 +13,7 @@ function taxiBill(km) {
       a = 10000 + 8000 * (km - 1);
     }
     if (km > 30) {
-      a = 10000 + 7000 * (km - 1);
+      a = 10000 + 8000 * 29 + 7000 * (km - 30);
     }
     document.writeln("Số tiền cần trả: ", a);
   }
