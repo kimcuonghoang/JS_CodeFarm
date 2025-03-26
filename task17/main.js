@@ -22,7 +22,7 @@ function taxSalary(salary) {
     if (salary > 80000000) {
       a = (salary * 30) / 100;
     }
-    console.log(a);
+    document.writeln("Thuế thu nhập cá nhan  : ", a);
   }
 }
 

@@ -1,4 +1,5 @@
 // Input:
+let a = +prompt("Nhập số a: ");
 function printPrimeNumber(n) {
   // Xử lý và in ra kết quả
   let i;
@@ -7,10 +8,10 @@ function printPrimeNumber(n) {
       return false;
     }
     if (n % i === 0) {
-      console.log(i);
+      document.writeln(i + " ");
     }
   }
 }
 
 // Output:
-printPrimeNumber(10); // 2 3 5 7
+printPrimeNumber(a); // 2 3 5 7

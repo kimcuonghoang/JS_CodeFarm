@@ -12,3 +12,4 @@ function isSameSign(a, b) {
 // console.log(typeof i);
 // Test cases
 console.log(isSameSign(n, i));
+document.writeln(" kiểm tra 2 số cùng dấu : ", isSameSign(n, i));

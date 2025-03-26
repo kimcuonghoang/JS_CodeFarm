@@ -15,7 +15,7 @@ function taxiBill(km) {
     if (km > 30) {
       a = 10000 + 7000 * (km - 1);
     }
-    console.log(a);
+    document.writeln("Số tiền cần trả: ", a);
   }
 }
 
