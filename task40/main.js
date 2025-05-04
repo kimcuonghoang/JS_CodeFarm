@@ -27,11 +27,11 @@ function getProductDetails(productId, productName, productPrice) {
 
 getUser(123)
   .then((user) => {
-    console.log("User:", user);
+    console.log(user);
     return getPurchases(user.id);
   })
   .then((purchases) => {
-    console.log("Purchases:", purchases);
+    console.log(purchases);
 
     const detailPromises = purchases.map((p) =>
       getProductDetails(p.id, p.product, p.price)
@@ -40,33 +40,33 @@ getUser(123)
     return Promise.all(detailPromises);
   })
   .then((details) => {
-    console.log("Product details:", details);
+    console.log(details);
     const total = details.reduce((sum, item) => sum + item.price, 0);
-    console.log("Total price:", total);
+    console.log(total);
   })
   .catch((err) => {
-    console.error("Error:", err);
+    console.error(err);
   });
 
 async function main() {
   try {
     const user = await getUser(123);
-    console.log("User:", user);
+    console.log(user);
 
     const purchases = await getPurchases(user.id);
-    console.log("Purchases:", purchases);
+    console.log(purchases);
 
     const detailPromises = purchases.map((p) =>
       getProductDetails(p.id, p.product, p.price)
     );
 
     const details = await Promise.all(detailPromises);
-    console.log("Product details:", details);
+    console.log(details);
 
     const total = details.reduce((sum, item) => sum + item.price, 0);
-    console.log("Total price:", total);
+    console.log(total);
   } catch (err) {
-    console.error("Error:", err);
+    console.error(err);
   }
 }
 
