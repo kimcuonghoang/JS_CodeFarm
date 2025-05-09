@@ -53,7 +53,7 @@ async function main() {
     const user = await getUser(123);
     console.log(user);
 
-    const purchases = await getPurchases(user.id);
+    const purcxhases = await getPurchases(user.id);
     console.log(purchases);
 
     const detailPromises = purchases.map((p) =>
