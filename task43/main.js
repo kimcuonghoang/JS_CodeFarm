@@ -53,7 +53,7 @@ const fetchProductDetail = async (id) => {
   try {
     const res = await fetch(`https://dummyjson.com/products/${id}`);
     const data = await res.json();
-
+    console.log(data);
     const detailElement = document.getElementById("product-detail");
     if (detailElement) {
       detailElement.innerHTML = `
@@ -96,12 +96,13 @@ nextElement.addEventListener("click", function () {
   }
 });
 
-function searchForm() {
+async function searchForm() {
   const keyword = document.getElementById("search").value.toLowerCase();
-  const filterProduct = allProducts.filter((item) =>
-    item.title.toLowerCase().includes(keyword)
+  const searchProduct = await fetch(
+    `https://dummyjson.com/products/search?q=${keyword}`
   );
-  renderUI(filterProduct);
+  const data = await searchProduct.json();
+  renderUI(data.products);
 }
 
 sortElement.addEventListener("change", function () {
