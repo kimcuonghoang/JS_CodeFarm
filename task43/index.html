@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Code Farm Store</h1>
+      <input
+        type="text"
+        id="search"
+        oninput="searchForm()"
+        placeholder="Search products..."
+      />
+      <select id="sort-price">
+        <option value="">-- Sắp xếp theo giá --</option>
+        <option value="asc">Giá: Bé - Lớn</option>
+        <option value="desc">Giá: Lớn - Bé</option>
+      </select>
+    </header>
+
+    <main>
+      <div id="product-detail"></div>
+      <div id="products"></div>
+      <div id="paginate">
+        <button id="preview">Preview</button>
+        <button id="current-page">1</button>
+        <button id="next">Next</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Code Farm Store. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
